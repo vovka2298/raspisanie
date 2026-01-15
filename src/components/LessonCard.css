@@ -1,0 +1,107 @@
+.lesson-card {
+  background-color: var(--tg-theme-bg-color);
+  border: 2px solid var(--tg-theme-secondary-bg-color);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  gap: 12px;
+  transition: all 0.2s ease;
+}
+
+.lesson-card.paid {
+  border-color: var(--paid-color);
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+.lesson-card.cancelled {
+  opacity: 0.6;
+  border-color: var(--cancelled-color);
+}
+
+.lesson-time {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--tg-theme-button-color);
+  min-width: 60px;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 2px;
+}
+
+.lesson-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.lesson-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.lesson-teacher,
+.lesson-student,
+.lesson-price {
+  font-size: 14px;
+  color: var(--tg-theme-text-color);
+}
+
+.lesson-teacher strong {
+  font-weight: 600;
+}
+
+.lesson-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.status-button {
+  flex: 1;
+  min-width: 100px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.paid-button {
+  background-color: var(--tg-theme-secondary-bg-color);
+  color: var(--tg-theme-text-color);
+}
+
+.paid-button.active {
+  background-color: var(--paid-color);
+  color: white;
+}
+
+.cancel-button {
+  background-color: var(--tg-theme-secondary-bg-color);
+  color: var(--tg-theme-text-color);
+}
+
+.cancel-button.active {
+  background-color: var(--cancelled-color);
+  color: white;
+}
+
+.delete-button {
+  background-color: transparent;
+  border: 1px solid var(--tg-theme-secondary-bg-color);
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.status-button:active,
+.delete-button:active {
+  opacity: 0.7;
+  transform: scale(0.98);
+}
