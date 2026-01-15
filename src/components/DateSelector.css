@@ -1,0 +1,82 @@
+.date-selector {
+  margin-bottom: 20px;
+  background-color: var(--tg-theme-secondary-bg-color);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.date-nav {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.nav-button {
+  flex: 1;
+  padding: 8px 12px;
+  background-color: var(--tg-theme-bg-color);
+  border: 1px solid var(--tg-theme-secondary-bg-color);
+  border-radius: 8px;
+  font-size: 13px;
+  color: var(--tg-theme-text-color);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.nav-button:active {
+  opacity: 0.7;
+  transform: scale(0.98);
+}
+
+.today-button {
+  background-color: var(--tg-theme-button-color);
+  color: var(--tg-theme-button-text-color);
+  border-color: var(--tg-theme-button-color);
+  font-weight: 500;
+}
+
+.date-display {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 12px;
+  background-color: var(--tg-theme-bg-color);
+  border-radius: 8px;
+  border: 1px solid var(--tg-theme-secondary-bg-color);
+}
+
+.date-input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+}
+
+.date-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.date-text {
+  flex: 1;
+  text-align: center;
+  pointer-events: none;
+}
+
+.date-main {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--tg-theme-text-color);
+}
+
+.date-weekday {
+  font-size: 12px;
+  color: var(--tg-theme-hint-color);
+  margin-top: 2px;
+  text-transform: capitalize;
+}
