@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import { format, startOfWeek, endOfWeek, startOfMonth, endOfMonth, startOfYear, endOfYear, subDays } from 'date-fns'
+import { format, startOfWeek, endOfWeek, startOfMonth, endOfMonth, startOfYear, endOfYear } from 'date-fns'
 import { ru } from 'date-fns/locale/ru'
-import { supabase, LessonInstance } from '../lib/supabase'
+import { supabase } from '../lib/supabase'
 import './StatisticsTab.css'
 
 type Period = 'today' | 'week' | 'month' | 'year' | 'custom'
