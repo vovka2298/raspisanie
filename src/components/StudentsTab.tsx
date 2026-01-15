@@ -71,7 +71,7 @@ export default function StudentsTab() {
 
               if (error) throw error
 
-              if (window.Telegram.WebApp.HapticFeedback) {
+              if (window.Telegram?.WebApp?.HapticFeedback) {
                 window.Telegram.WebApp.HapticFeedback.notificationOccurred('success')
               }
 
