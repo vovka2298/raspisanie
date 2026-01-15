@@ -1,5 +1,15 @@
 import { createClient } from '@supabase/supabase-js'
 
+// Типы для Vite env
+interface ImportMetaEnv {
+  readonly VITE_SUPABASE_URL: string
+  readonly VITE_SUPABASE_ANON_KEY: string
+}
+
+interface ImportMeta {
+  readonly env: ImportMetaEnv
+}
+
 // Эти переменные должны быть установлены в Vercel Environment Variables
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || ''
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || ''
@@ -43,6 +53,7 @@ export interface LessonInstance {
   teacher_id: string
   student_id: string
   price: number
+  time: string // Формат HH:MM или HH:MM:SS
   created_at: string
   updated_at: string
   teachers?: Teacher
