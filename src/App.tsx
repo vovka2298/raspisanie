@@ -127,14 +127,14 @@ function App() {
     }
 
     // Проверка подключения к Supabase
-    supabase
+    void supabase
       .from('teachers')
       .select('count')
       .limit(1)
       .then(() => {
         console.log('Supabase подключен успешно')
       })
-      .catch((error) => {
+      .catch((error: unknown) => {
         console.error('Ошибка подключения к Supabase:', error)
       })
   }, [])
